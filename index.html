@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayan's Phone 💌</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="phone">
+
+        <!-- LOCK SCREEN -->
+        <section id="lockScreen" class="screen lock-screen">
+
+            <div class="lock-top">
+                <div id="currentTime">12:00</div>
+                <div>3 October 2026</div>
+            </div>
+
+            <div class="lock-content">
+                <div class="lock-icon">🔒</div>
+
+                <h1>Ayan</h1>
+                <p>Enter the passcode to unlock</p>
+
+                <input
+                    type="text"
+                    id="passcode"
+                    placeholder="passcode"
+                    autocomplete="off"
+                >
+
+                <button onclick="unlockPhone()">Unlock</button>
+
+                <p id="wrongPassword" class="error"></p>
+            </div>
+
+            <div class="lock-bottom">
+                Made with love by Manya ♡
+            </div>
+
+        </section>
+
+
+        <!-- HOME SCREEN -->
+        <section id="homeScreen" class="screen home-screen hidden">
+
+            <div class="status-bar">
+                <span id="homeTime">12:00</span>
+                <span>📶 🔋</span>
+            </div>
+
+            <div class="home-header">
+                <h1>Hi Ayan ♡</h1>
+                <p>your phone has a few things to tell you...</p>
+            </div>
+
+
+            <div class="apps">
+
+                <button class="app" onclick="openApp('messages')">
+                    <div class="app-icon messages">💬</div>
+                    <span>Messages</span>
+                </button>
+
+                <button class="app" onclick="openApp('gallery')">
+                    <div class="app-icon gallery">📷</div>
+                    <span>Gallery</span>
+                </button>
+
+                <button class="app" onclick="openApp('notes')">
+                    <div class="app-icon notes">📝</div>
+                    <span>Notes</span>
+                </button>
+
+                <button class="app" onclick="openApp('calendar')">
+                    <div class="app-icon calendar">📅</div>
+                    <span>Calendar</span>
+                </button>
+
+                <button class="app" onclick="openApp('deleted')">
+                    <div class="app-icon deleted">🗑️</div>
+                    <span>Recently Deleted</span>
+                </button>
+
+                <button class="app" onclick="openApp('secret')">
+                    <div class="app-icon secret">🔐</div>
+                    <span>Secret App</span>
+                </button>
+
+            </div>
+
+            <div class="home-footer">
+                <p>6 apps • 1 very important person 💌</p>
+            </div>
+
+        </section>
+
+
+        <!-- APP WINDOW -->
+        <div id="appWindow" class="app-window hidden">
+
+            <div class="app-topbar">
+                <button onclick="closeApp()">←</button>
+                <h2 id="appTitle">App</h2>
+                <span></span>
+            </div>
+
+            <div id="appContent" class="app-content">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
